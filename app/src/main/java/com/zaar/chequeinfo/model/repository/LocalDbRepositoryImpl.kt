@@ -1,6 +1,5 @@
 package com.zaar.chequeinfo.model.repository
 
-import android.content.Context
 import androidx.sqlite.db.SimpleSQLiteQuery
 import com.zaar.chequeinfo.R
 import com.zaar.chequeinfo.app.App
@@ -9,11 +8,11 @@ import com.zaar.chequeinfo.model.dataModel.cheque.ChequeModel
 import com.zaar.chequeinfo.model.mappers.ioDb.MapperChequeModelToChequeInput
 import com.zaar.chequeinfo.model.mappers.MapperChequeOutputToChequeModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class LocalDbRepositoryImpl(
-    private val context: Context
 ) : LocalDbRepository {
 
     @Inject
@@ -22,6 +21,13 @@ class LocalDbRepositoryImpl(
     init {
         App.getAppComponent()
             .injectLocalDbRepository(this)
+    }
+
+    override suspend fun clearDB() {
+        withContext(Dispatchers.IO) {
+            db.clearAllTables()
+            db.getDatabaseDao().clearSqliteSequence()
+        }
     }
 
     override suspend fun setChequesModel(chequesModel: List<ChequeModel>): MutableMap<Int, Int> =

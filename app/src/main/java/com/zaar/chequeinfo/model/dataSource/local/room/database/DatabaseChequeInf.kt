@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import com.zaar.chequeinfo.model.dataSource.local.room.converter.ConverterDate
 import com.zaar.chequeinfo.model.dataSource.local.room.dao.ChequeDao
+import com.zaar.chequeinfo.model.dataSource.local.room.dao.DatabaseDao
 import com.zaar.chequeinfo.model.dataSource.local.room.dao.ItemDao
 import com.zaar.chequeinfo.model.dataSource.local.room.dao.ReceiptDao
 import com.zaar.chequeinfo.model.dataSource.local.room.entityDB.ChequeDb
@@ -69,4 +70,5 @@ abstract class DatabaseChequeInf : RoomDatabase() {
     abstract fun getChequeDao(): ChequeDao
     abstract fun getItemDao(): ItemDao
     abstract fun getReceiptDao(): ReceiptDao
+    abstract fun getDatabaseDao(): DatabaseDao
 }

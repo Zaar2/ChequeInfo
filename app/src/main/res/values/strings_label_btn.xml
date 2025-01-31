@@ -9,4 +9,5 @@
     <string name="sellers_lblBtn">Sellers</string>
     <string name="cheques_lblBtn">Cheques</string>
     <string name="information_lblBtn">Information</string>
+    <string name="clearDatabase_lblBtn">clear database</string>
 </resources>

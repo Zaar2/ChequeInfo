@@ -88,8 +88,9 @@ object FuncChequesList {
                     }
                 }
         }
-        firstDateTime?.format(formatter)
+        val res = firstDateTime?.format(formatter)
             ?: "00.00.0000"
+        res
     }
 
 

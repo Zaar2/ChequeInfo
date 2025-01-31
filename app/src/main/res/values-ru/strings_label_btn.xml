@@ -9,4 +9,5 @@
     <string name="sellers_lblBtn">Продавцы</string>
     <string name="cheques_lblBtn">Чеки</string>
     <string name="information_lblBtn">Информация</string>
+    <string name="clearDatabase_lblBtn">удаление всех записей</string>
 </resources>

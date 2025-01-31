@@ -15,11 +15,13 @@ class ConverterDate {
 
     @TypeConverter
     fun dateTimeToTimestamp(dateTime: LocalDateTime): Long =
-        dateTime.toInstant(TimeZone.UTC).epochSeconds
+        dateTime.toInstant(TimeZone.UTC).toEpochMilliseconds()
 
     @TypeConverter
-    fun timestampToDateTime(timestamp: Long): LocalDateTime =
-        Instant.fromEpochMilliseconds(timestamp).toLocalDateTime(TimeZone.UTC)
+    fun timestampToDateTime(timestamp: Long): LocalDateTime {
+        val res = Instant.fromEpochMilliseconds(timestamp).toLocalDateTime(TimeZone.UTC)
+        return res
+    }
 
     @TypeConverter
     fun dateTimeCompToTimestamp(dateTimeComponents: DateTimeComponents): Long =

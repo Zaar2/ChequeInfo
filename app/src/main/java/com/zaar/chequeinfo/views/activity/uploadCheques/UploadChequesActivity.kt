@@ -46,7 +46,6 @@ class UploadChequesActivity : AppCompatActivity() {
         model = ViewModelProvider(
             this,
             UploadChequesVMFactory(
-                applicationContext,
                 parsedData
             )
         ).get()
@@ -55,7 +54,7 @@ class UploadChequesActivity : AppCompatActivity() {
     private fun initView() {
         binding.statInfUploadActivity.root.visibility = View.VISIBLE
         binding.statInfoUploadedCheques.root.visibility = View.GONE
-        model?.getSummarizedInformation()
+        model?.getSummarizedInfo()
     }
 
     private fun initObserve() {

@@ -1,6 +1,5 @@
 package com.zaar.chequeinfo.model.repository
 
-import android.content.Context
 import androidx.sqlite.db.SimpleSQLiteQuery
 import com.zaar.chequeinfo.R
 import com.zaar.chequeinfo.app.App
@@ -13,7 +12,6 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class LocalDbRepositoryImpl(
-    private val context: Context
 ) : LocalDbRepository {
 
     @Inject

@@ -19,7 +19,7 @@ import kotlin.concurrent.Volatile
 import kotlin.io.path.Path
 
 @Database(
-    version = 2,
+    version = 1,
     entities = [
         ChequeDb::class,
         ItemDb::class,

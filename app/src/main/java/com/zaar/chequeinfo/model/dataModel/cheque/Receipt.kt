@@ -1,5 +1,6 @@
 package com.zaar.chequeinfo.model.dataModel.cheque
 
+import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Ignore
 import com.zaar.chequeinfo.utilities.serializers.DateTimeSerializer
@@ -15,6 +16,7 @@ data class Receipt(
     var code: Int = -1,
     var creditSum: Int = 0,
     @Serializable(with = DateTimeSerializer::class)
+    @ColumnInfo(typeAffinity = ColumnInfo.INTEGER)
     var dateTime: LocalDateTime? = null,
     var ecashTotalSum: Int = 0,
     var fiscalDocumentFormatVer: Int = -1,

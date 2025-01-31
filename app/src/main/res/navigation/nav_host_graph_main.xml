@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host_graph_mainMenu"
+    app:startDestination="@id/mainMenuFragment2">
+    <fragment
+        android:id="@+id/mainMenuFragment2"
+        android:name="com.zaar.chequeinfo.views.fragment.mainMenu.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu">
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_informationFragment"
+            app:destination="@id/informationFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_goodsFragment"
+            app:destination="@id/goodsFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_sellersFragment"
+            app:destination="@id/sellersFragment" />
+        <action
+            android:id="@+id/action_mainMenuFragment2_to_chequesFragment"
+            app:destination="@id/chequesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informationFragment"
+        android:name="com.zaar.chequeinfo.views.fragment.information.InformationFragment"
+        android:label="fragment_information"
+        tools:layout="@layout/fragment_information">
+        <action
+            android:id="@+id/action_informationFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/chequesFragment"
+        android:name="com.zaar.chequeinfo.views.fragment.cheques.ChequesFragment"
+        android:label="fragment_cheques"
+        tools:layout="@layout/fragment_cheques" >
+        <action
+            android:id="@+id/action_chequesFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/goodsFragment"
+        android:name="com.zaar.chequeinfo.views.fragment.goods.GoodsFragment"
+        android:label="fragment_goods"
+        tools:layout="@layout/fragment_goods" >
+        <action
+            android:id="@+id/action_goodsFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellersFragment"
+        android:name="com.zaar.chequeinfo.views.fragment.sellers.SellersFragment"
+        android:label="fragment_sellers"
+        tools:layout="@layout/fragment_sellers" >
+        <action
+            android:id="@+id/action_sellersFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment2" />
+    </fragment>
+</navigation>

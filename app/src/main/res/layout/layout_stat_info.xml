@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/constraintLayout"
+    >
+
+    <!--    cheques-->
+    <TextView android:id="@+id/tv_labelCheques_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/cheques_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView android:id="@+id/tv_valueCheques_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelCheques_uploadActivity"
+        />
+
+<!--    records-->
+    <TextView android:id="@+id/tv_labelRecords_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/records_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelCheques_uploadActivity"        />
+
+    <TextView android:id="@+id/tv_valueRecords_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelRecords_uploadActivity"
+        />
+
+    <!--    Goods    -->
+    <TextView android:id="@+id/tv_labelGoods_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/goods_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelRecords_uploadActivity"
+        />
+
+    <TextView android:id="@+id/tv_valueGoods_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelGoods_uploadActivity"
+        />
+
+    <!--    Sellers-->
+    <TextView android:id="@+id/tv_labelSellers_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/sellers_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelGoods_uploadActivity"
+        />
+
+    <TextView android:id="@+id/tv_valueSellers_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelSellers_uploadActivity"
+        />
+
+    <!--    TotalCost-->
+    <TextView android:id="@+id/tv_labelTotalCost_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/totalCost_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelSellers_uploadActivity"
+        />
+
+    <TextView android:id="@+id/tv_valueTotalCost_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelTotalCost_uploadActivity"
+        />
+
+    <!--    AvrCost-->
+    <TextView android:id="@+id/tv_labelAvrCost_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:text="@string/avrCost_lblTv_inf"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelTotalCost_uploadActivity"
+        />
+
+    <TextView android:id="@+id/tv_valueAvrCost_uploadActivity"
+        style="@style/textView_option"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:text="@string/_9999"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_labelAvrCost_uploadActivity"
+        />
+
+    <!--    FirstDate-->
+    <LinearLayout android:id="@+id/layoutFirstDate_uploadActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_labelAvrCost_uploadActivity"
+        >
+
+        <TextView android:id="@+id/tv_labelFirstDate_uploadActivity"
+            style="@style/textView_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firstDate_lblTv"
+            />
+
+        <TextView android:id="@+id/tv_valueFirstDate_uploadActivity"
+            style="@style/textView_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_99.99.9999"
+            />
+    </LinearLayout>
+
+    <!--    LastDate-->
+    <LinearLayout android:id="@+id/layoutLastDate_uploadActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/layoutFirstDate_uploadActivity"
+        >
+
+        <TextView android:id="@+id/tv_labelLastDate_uploadActivity"
+            style="@style/textView_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lastDate_lblTv"
+            />
+
+        <TextView android:id="@+id/tv_valueLastDate_uploadActivity"
+            style="@style/textView_option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_99.99.9999"
+            />
+    </LinearLayout>
+
+<!--    description-->
+    <TextView android:id="@+id/tv_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/layoutLastDate_uploadActivity"
+        style="@style/textView_alertMessage"
+        android:visibility="gone"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

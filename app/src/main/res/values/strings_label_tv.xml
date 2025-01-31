@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firstDate_lblTv">first date:</string>
+    <string name="lastDate_lblTv">last date:</string>
+
+    <string name="cheques_lblTv_inf">cheques</string>
+    <string name="records_lblTv_inf">records</string>
+    <string name="goods_lblTv_inf">goods</string>
+    <string name="sellers_lblTv_inf">sellers</string>
+    <string name="totalCost_lblTv_inf">total cost</string>
+    <string name="avrCost_lblTv_inf">avr cost</string>
+
+    <string name="lblActivity_uploadCheques">Upload cheques</string>
+
+    <string name="lblFragment_information">@string/information_lblBtn</string>
+    <string name="lblFragment_cheques">@string/cheques_lblBtn</string>
+    <string name="lblFragment_goods">@string/goods_lblBtn</string>
+    <string name="lblFragment_sellers">@string/sellers_lblBtn</string>
+
+    <string name="lblChequesUploaded">Cheques uploaded</string>
+    <string name="lblRecordsUploaded">Records uploaded</string>
+    <string name="lblChequesRejected">Cheques rejected</string>
+    <string name="lblRecordsRejected">Records rejected</string>
+</resources>

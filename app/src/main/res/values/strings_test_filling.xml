@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="_9999" translatable="false">9999</string>
+    <string name="_99.99.9999" translatable="false">99.99.9999</string>
+</resources>

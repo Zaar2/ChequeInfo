@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firstDate_lblTv">\u0020\u0020с:\u0020</string>
+    <string name="lastDate_lblTv">по:\u0020</string>
+
+    <string name="cheques_lblTv_inf">чеков</string>
+    <string name="records_lblTv_inf">записей</string>
+    <string name="goods_lblTv_inf">товаров</string>
+    <string name="sellers_lblTv_inf">продавцов</string>
+    <string name="totalCost_lblTv_inf">сумма</string>
+    <string name="avrCost_lblTv_inf">средн.чек</string>
+
+    <string name="lblActivity_uploadCheques">Сохранение чеков</string>
+
+    <string name="lblFragment_information">@string/information_lblBtn</string>
+    <string name="lblFragment_cheques">@string/cheques_lblBtn</string>
+    <string name="lblFragment_goods">@string/goods_lblBtn</string>
+    <string name="lblFragment_sellers">@string/sellers_lblBtn</string>
+
+    <string name="lblChequesUploaded">Чеков загружено</string>
+    <string name="lblRecordsUploaded">Записей загружено</string>
+    <string name="lblChequesRejected">Чеков отклонено</string>
+    <string name="lblRecordsRejected">Записей отклонено</string>
+</resources>

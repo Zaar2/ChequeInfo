@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_lblBtn">назад</string>
+
+    <string name="toMainMenu_lblBtn">в меню</string>
+    <string name="save_lblBtn">сохранить</string>
+
+    <string name="goods_lblBtn">Товары</string>
+    <string name="sellers_lblBtn">Продавцы</string>
+    <string name="cheques_lblBtn">Чеки</string>
+    <string name="information_lblBtn">Информация</string>
+</resources>

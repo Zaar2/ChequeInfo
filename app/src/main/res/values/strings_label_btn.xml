@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="back_lblBtn">back</string>
+
+    <string name="toMainMenu_lblBtn">main</string>
+    <string name="save_lblBtn">save</string>
+
+    <string name="goods_lblBtn">Goods</string>
+    <string name="sellers_lblBtn">Sellers</string>
+    <string name="cheques_lblBtn">Cheques</string>
+    <string name="information_lblBtn">Information</string>
+</resources>

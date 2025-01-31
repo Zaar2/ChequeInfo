@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="constraintLayout">
+        <item name="android:paddingStart">@dimen/size_padding_left_item_list_view</item>
+        <item name="android:paddingEnd">@dimen/size_padding_right</item>
+    </style>
+</resources>

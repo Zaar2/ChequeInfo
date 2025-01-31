@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="textView">
+        <item name="android:textSize">@dimen/size_text_of_textView_value</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="paddingEnd">5dp</item>
+        <item name="android:textColor">@color/background_btn</item>
+        <item name="android:fontFamily">@font/muller_bolt</item>
+    </style>
+
+    <style name="textView_label" parent="textView">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/muller_regular</item>
+        <item name="android:layout_marginStart">@dimen/margin_listView</item>
+    </style>
+
+    <style name="textView_value" parent="textView">
+
+    </style>
+
+    <style name="textView_reference" parent="android:Widget.TextView">
+        <item name="android:textSize">@dimen/size_text_of_textView_reference</item>
+        <item name="android:fontFamily">@font/muller_bolt</item>
+        <item name="android:paddingStart">5dp</item>
+        <item name="paddingEnd">5dp</item>
+        <item name="android:textColor">@color/background_btn</item>
+    </style>
+
+    <style name="textView_labelActivity" parent="textView">
+        <item name="android:textSize">@dimen/size_text_of_textView_value</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textStyle">italic|bold</item>
+    </style>
+
+    <style name="textView_heading" parent="textView">
+        <item name="android:textSize">@dimen/size_text_of_textView_heading</item>
+    </style>
+
+    <style name="textView_smallText" parent="textView">
+        <item name="android:textSize">@dimen/size_text_of_textView_subText</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textView_option" parent="textView">
+        <item name="android:textSize">@dimen/size_text_of_textView_option</item>
+        <item name="android:paddingStart">0dp</item>
+    </style>
+
+    <style name="textView_alertMessage" parent="textView">
+        <item name="android:textColor">@color/background_btn</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/size_text_of_textView_reference</item>
+    </style>
+</resources>

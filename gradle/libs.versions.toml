@@ -1,0 +1,186 @@
+[versions]
+#plugins
+agp = "8.7.3"
+alib = "8.2.2"
+kotlin = "2.0.0"
+ksp = "2.0.0-1.0.23"
+serializationPlg = "2.1.0"
+#android libs
+coreKtx = "1.15.0"
+legacySupportV4 = "1.0.0"
+appcompat = "1.7.0"
+material = "1.12.0"
+activity = "1.9.3"
+fragmentKtx = "1.8.5"
+recyclerview = "1.3.2"
+viewpager2 = "1.1.0"
+constraintlayout = "2.2.0"
+securityCrypto = "1.1.0-alpha06"
+#kotlinx-serialization
+serializationJson = "1.7.3"
+serializationDatetime = "0.6.1"
+#liveData and viewModel
+lifecycleExtensions = "2.2.0"
+#navigation
+navigation = "2.8.4"
+#coroutines
+#kotlinxCoroutinesAndroid = "1.7.3"
+kotlinxCoroutinesAndroidVersion = "1.8.0-RC2"
+kotlinxCoroutinesCore = "1.8.0-RC2"
+#rx-java
+rxJava2 = "2.2.17"
+rxAndroid = "2.0.1"
+#retrofit
+retrofit = "2.9.0"
+adapterRxjava2 = "2.3.0"
+converterGson = "2.9.0"
+converterScalars = "2.5.0"
+reactivestreams = "1.1.1"
+#room
+room = "2.6.1"
+#test-junit
+junit = "4.13.2"
+junitVersion = "1.2.1"
+junitJupiterV591 = "5.9.1"
+junitJupiterV581 = "5.8.1"
+fragmentTesting = "1.8.5"
+testCoreKtx = "1.6.1"
+#test-mockito
+mockito = "5.11.0"
+#test-espresso
+espresso = "3.6.1"
+espressoRules = "1.6.1"
+espressoTestRunner = "1.6.2"
+espressoTestMonitor = "1.7.2"
+#dagger2
+dagger2 = "2.52"
+media3CommonKtx = "1.5.1"
+
+[libraries]
+#android libs
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragmentKtx" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-sharedPreferences-crypto = { module = "androidx.security:security-crypto", version.ref = "securityCrypto" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+
+#kotlinx-serialization
+kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-serialization-json", version.ref = "serializationJson" }
+kotlinx-serialization-datetime = { group = "org.jetbrains.kotlinx", name = "kotlinx-datetime", version.ref = "serializationDatetime" }
+
+#liveData and viewModel
+androidx-lifecycle-extensions = { module = "androidx.lifecycle:lifecycle-extensions", version.ref = "lifecycleExtensions" }
+
+#navigation
+androidx-navigation-dynamic-features-fragment = { module = "androidx.navigation:navigation-dynamic-features-fragment", version.ref = "navigation" }
+androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigation" }
+androidx-navigation-testing = { module = "androidx.navigation:navigation-testing", version.ref = "navigation" }
+androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigation" }
+
+#coroutines
+androidx-lifecycle-livedata-ktx = { module = "androidx.lifecycle:lifecycle-livedata-ktx" }
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx" }
+androidx-lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx" }
+#kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroid" }
+kotlinx-coroutines-android-v180rc2 = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "kotlinxCoroutinesAndroidVersion" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+
+#rx-java
+rxJava2 = { group = "io.reactivex.rxjava2", name = "rxjava", version.ref = "rxJava2" }
+rxJava2-rxandroid = { group = "io.reactivex.rxjava2", name = "rxandroid", version.ref = "rxAndroid" }
+
+#retrofit
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+adapter-rxjava2 = { module = "com.squareup.retrofit2:adapter-rxjava2", version.ref = "adapterRxjava2" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "converterGson" }
+converter-scalars = { module = "com.squareup.retrofit2:converter-scalars", version.ref = "converterScalars" }
+reactivestreams = { module = "android.arch.lifecycle:reactivestreams", version.ref = "reactivestreams" }
+
+#room
+androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+androidx-room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+androidx-room-rxjava2 = { module = "androidx.room:room-rxjava2", version.ref = "room" }
+
+#test-junit
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+#noinspection SimilarGradleDependency
+junit-jupiter-v591 = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiterV591" }
+#noinspection SimilarGradleDependency
+junit-jupiter-v581 = { group = "org.junit.jupiter", name = "junit-jupiter", version.ref = "junitJupiterV581" }
+androidx-fragment-testing = { group = "androidx.fragment", name = "fragment-testing", version.ref = "fragmentTesting" }
+androidx-test-coreKtx = { group = "androidx.test", name = "core-ktx", version.ref = "testCoreKtx" }
+
+#test-mockito
+mockito-core = { group = "org.mockito", name = "mockito-core", version.ref = "mockito" }
+
+#test-espresso
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-espresso-accessibility = { group = "androidx.test.espresso", name = "espresso-accessibility", version.ref = "espresso" }
+androidx-espresso-contrib = { group = "androidx.test.espresso", name = "espresso-contrib", version.ref = "espresso" }
+androidx-espresso-intents = { group = "androidx.test.espresso", name = "espresso-intents", version.ref = "espresso" }
+androidx-espresso-rules = { group = "androidx.test", name = "rules", version.ref = "espressoRules" }
+androidx-espresso-runner = { group = "androidx.test", name = "runner", version.ref = "espressoTestRunner" }
+androidx-espresso-idlingresource = { group = "androidx.test.espresso", name = "espresso-idling-resource", version.ref = "espresso" }
+androidx-test-monitor = { group = "androidx.test", name = "monitor", version.ref = "espressoTestMonitor" }
+
+#dagger2
+dagger2 = { group = "com.google.dagger", name = "dagger", version.ref = "dagger2" }
+dagger2-compiler = { group = "com.google.dagger", name = "dagger-compiler", version.ref = "dagger2" }
+androidx-media3-common-ktx = { group = "androidx.media3", name = "media3-common-ktx", version.ref = "media3CommonKtx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serializationPlg" }
+
+[bundles]
+android-common-libs-impl = [
+    "androidx-core-ktx",
+    "androidx-appcompat",
+    "material",
+    "androidx-legacy-support-v4",
+]
+android-addLibs-impl = [
+    "androidx-constraintlayout",
+    "androidx-fragment-ktx",
+    "androidx-recyclerview",
+    "androidx-sharedPreferences-crypto",
+    "androidx-viewpager2",
+]
+kotlinx-serialization-impl=[
+    "kotlinx-serialization-json",
+    "kotlinx-serialization-datetime",
+]
+coroutines-common-impl = ["kotlinx-coroutines-core", "kotlinx-coroutines-android-v180rc2"]
+coroutines-addLibs-impl = [
+    "androidx-lifecycle-viewmodel-ktx",
+    "androidx-lifecycle-runtime-ktx",
+    "androidx-lifecycle-livedata-ktx"
+]
+rxJava-impl = [
+    "rxJava2", "rxJava2-rxandroid"
+]
+retrofit = [
+    "retrofit",
+    "converter-gson",
+    "converter-scalars",
+    "adapter-rxjava2",
+    "reactivestreams"
+]
+room = ["androidx-room-ktx", "androidx-room-runtime", "androidx-room-rxjava2"]
+espresso-atimpl = [
+    "espresso-core",
+    "androidx-espresso-accessibility",
+    "androidx-espresso-intents",
+    "androidx-espresso-idlingresource"
+]
+espresso-impl = ["androidx-espresso-runner", "androidx-espresso-rules", "androidx-espresso-contrib"]

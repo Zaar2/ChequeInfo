@@ -9,10 +9,11 @@ import com.zaar.chequeinfo.R
 import com.zaar.chequeinfo.app.App
 import com.zaar.chequeinfo.model.dataSource.otherApp.ParsedData
 import com.zaar.chequeinfo.databinding.ActivityUploadChequesBinding
+import com.zaar.chequeinfo.utilities.views.UtilsButtons
 import javax.inject.Inject
 
 class UploadChequesActivity : AppCompatActivity() {
-    private var model: UploadChequesViewModel? = null
+    private var model: UploadChequesBaseViewModelSummarizedInf? = null
 
     @Inject
     lateinit var parsedData: ParsedData
@@ -54,6 +55,11 @@ class UploadChequesActivity : AppCompatActivity() {
     private fun initView() {
         binding.statInfUploadActivity.root.visibility = View.VISIBLE
         binding.statInfoUploadedCheques.root.visibility = View.GONE
+
+        model?.countMaxProgressBar =
+            binding.statInfUploadActivity.layStatInfoMain.childCount
+        binding.progressbar.root.min = 0
+        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
         model?.getSummarizedInfo()
     }
 
@@ -129,7 +135,15 @@ class UploadChequesActivity : AppCompatActivity() {
                     text = "$value"
                 }
             }
+            binding.progressbar.root.visibility = View.INVISIBLE
         }
+        model?.ldIsProgress()?.observe(this) {
+            if (it) progressOn()
+            else progressOff()
+        }
+//        model?.ldSetProgress()?.observe(this) {
+//            binding.progressbar.root.progress = it
+//        }
     }
 
     private fun <T> listToStr(list: List<T>): String =
@@ -145,6 +159,7 @@ class UploadChequesActivity : AppCompatActivity() {
 
     private fun btnSaveToDatabaseOnClick() {
         binding.btnSaveToDatabase.setOnClickListener {
+            binding.progressbar.root.isIndeterminate = true
             model?.saveCheques()
         }
     }
@@ -152,5 +167,13 @@ class UploadChequesActivity : AppCompatActivity() {
     private fun btnToMenuOnClick() {
 //        binding.btnBack.setOnClickListener {
 //        }
+    }
+
+    private fun progressOn() {
+        binding.progressbar.root.visibility = View.VISIBLE
+    }
+
+    private fun progressOff() {
+        binding.progressbar.root.visibility = View.INVISIBLE
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="firstDate_lblTv">\u0020\u0020с:\u0020</string>
-    <string name="lastDate_lblTv">по:\u0020</string>
+    <string name="firstDate_lblTv">первый чек:\u0020</string>
+    <string name="lastDate_lblTv">последний чек:\u0020</string>
 
     <string name="cheques_lblTv_inf">чеков</string>
     <string name="records_lblTv_inf">записей</string>

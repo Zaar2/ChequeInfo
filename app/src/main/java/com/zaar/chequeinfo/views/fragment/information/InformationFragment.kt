@@ -10,10 +10,11 @@ import androidx.navigation.fragment.findNavController
 import com.zaar.chequeinfo.R
 import com.zaar.chequeinfo.databinding.FragmentInformationBinding
 import com.zaar.chequeinfo.utilities.functions.FuncNavigation.toNextFragment
+import com.zaar.chequeinfo.utilities.views.UtilsButtons
 
 class InformationFragment : Fragment() {
 
-    private var model: InformationViewModel? = null
+    private var model: InformationViewModelSummarizedInf? = null
     private var _binding: FragmentInformationBinding? = null
     private val binding
         get() = _binding ?: throw IllegalStateException(
@@ -31,10 +32,16 @@ class InformationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         initVariable()
         initView()
         initObserve()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.progressbar.root.visibility = View.VISIBLE
+        model?.getSummarizedInfo()
+        btnOff()
     }
 
     private fun initVariable() {
@@ -42,11 +49,14 @@ class InformationFragment : Fragment() {
             requireActivity(),
             InformationVmFactory(
             )
-        )[InformationViewModel::class.java]
+        )[InformationViewModelSummarizedInf::class.java]
     }
 
     private fun initView() {
-        model?.getSummarizedInfo()
+        binding.statInfInformationFragment.root.visibility = View.VISIBLE
+        model?.countMaxProgressBar =
+            binding.statInfInformationFragment.layStatInfoMain.childCount
+        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
     }
 
     private fun initObserve() {
@@ -79,6 +89,13 @@ class InformationFragment : Fragment() {
         model?.ldAvrCost()?.observe(viewLifecycleOwner) {
             binding.statInfInformationFragment.tvValueAvrCostUploadActivity.text = it
         }
+        model?.ldIsProgress()?.observe(viewLifecycleOwner) {
+            if (it) btnOff()
+            else btnOn()
+        }
+        model?.ldSetProgress()?.observe(viewLifecycleOwner) {
+            binding.progressbar.root.progress = it
+        }
     }
 
     private fun initObserveView() {
@@ -101,5 +118,17 @@ class InformationFragment : Fragment() {
             model?.clearDatabase()
             model?.getSummarizedInfo()
         }
+    }
+
+    private fun btnOff() {
+        UtilsButtons.activeBtnOffBlock(binding.btnBack, requireContext())
+        UtilsButtons.activeBtnOffBlock(binding.btnClearDatabase, requireContext())
+        binding.progressbar.root.visibility = View.VISIBLE
+    }
+
+    private fun btnOn() {
+        binding.progressbar.root.visibility = View.INVISIBLE
+        UtilsButtons.activeBtnOn(binding.btnBack, requireContext())
+        UtilsButtons.activeBtnOn(binding.btnClearDatabase, requireContext())
     }
 }

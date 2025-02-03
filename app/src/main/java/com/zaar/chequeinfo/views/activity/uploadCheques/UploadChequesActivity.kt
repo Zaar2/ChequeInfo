@@ -12,7 +12,7 @@ import com.zaar.chequeinfo.databinding.ActivityUploadChequesBinding
 import javax.inject.Inject
 
 class UploadChequesActivity : AppCompatActivity() {
-    private var model: UploadChequesViewModel? = null
+    private var model: UploadChequesBaseViewModelSummarizedInf? = null
 
     @Inject
     lateinit var parsedData: ParsedData

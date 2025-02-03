@@ -4,46 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.fragment.information.InformationFragment">
+    tools:context=".views.fragment.information.InformationFragment"
+    >
 
-    <TextView
-        android:id="@+id/label_informationFragment"
+    <TextView android:id="@+id/label_informationFragment"
         style="@style/textView_labelActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/lblFragment_information"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
-    <include
-        android:id="@+id/statInf_informationFragment"
-        layout="@layout/layout_stat_info"
+    <include android:id="@+id/progressbar"
+        layout="@layout/progress_bar_horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_below="@+id/label_informationFragment"
         app:layout_constraintTop_toBottomOf="@+id/label_informationFragment"
-        app:layout_constraintBottom_toTopOf="@+id/btnClearDatabase"
         />
 
-    <Button android:id="@+id/btnClearDatabase"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/btnBack"
-        app:layout_constraintTop_toBottomOf="@+id/statInf_informationFragment"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        style="@style/button"
-        android:text="@string/clearDatabase_lblBtn"
-        />
-
-    <Button
-        android:id="@+id/btnBack"
-        style="@style/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:insetBottom="0dp"
-        android:text="@string/back_lblBtn"
+    <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/layoutInfMain"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressbar"
+        >
+
+        <include android:id="@+id/statInf_informationFragment"
+            layout="@layout/layout_stat_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/btnClearDatabase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <Button android:id="@+id/btnClearDatabase"
+            style="@style/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/clearDatabase_lblBtn"
+            app:layout_constraintBottom_toTopOf="@+id/btnBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statInf_informationFragment"
+            />
+
+        <Button android:id="@+id/btnBack"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetBottom="0dp"
+            android:text="@string/back_lblBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

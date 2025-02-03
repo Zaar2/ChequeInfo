@@ -4,17 +4,21 @@ import androidx.lifecycle.viewModelScope
 import com.zaar.chequeinfo.R
 import com.zaar.chequeinfo.model.dataSource.otherApp.ParsedData
 import com.zaar.chequeinfo.model.repository.LocalDbRepositoryImpl
-import com.zaar.chequeinfo.viewModels.BaseViewModel
+import com.zaar.chequeinfo.viewModels.BaseViewModelSummarizedInf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class UploadChequesViewModel(
+class UploadChequesBaseViewModelSummarizedInf(
     private val parsedData: ParsedData,
-) : BaseViewModel() {
+) : BaseViewModelSummarizedInf() {
 
     private val chequesList = parsedData.chequeModels
 
-    fun getSummarizedInfo() = getSummarizedInformation(parsedData.chequeModels)
+    fun getSummarizedInfo() = viewModelScope.launch(Dispatchers.IO) {
+        getSummarizedInformation(
+            parsedData.chequeModels
+        )
+    }
 
     fun saveCheques() {
         viewModelScope.launch(Dispatchers.IO) {

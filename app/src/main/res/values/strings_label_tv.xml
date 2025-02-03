@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="firstDate_lblTv">first date:</string>
-    <string name="lastDate_lblTv">last date:</string>
+    <string name="firstDate_lblTv">first date:\u0020</string>
+    <string name="lastDate_lblTv">last date:\u0020</string>
 
     <string name="cheques_lblTv_inf">cheques</string>
     <string name="records_lblTv_inf">records</string>

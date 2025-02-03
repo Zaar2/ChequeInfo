@@ -8,7 +8,6 @@
     android:progressTint="@color/background_btn"
     android:max="100"
     android:min="0"
-    android:indeterminate="true"
     >
 
 </ProgressBar>

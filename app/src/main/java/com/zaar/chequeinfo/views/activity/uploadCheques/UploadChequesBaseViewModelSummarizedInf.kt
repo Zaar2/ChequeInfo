@@ -8,16 +8,13 @@ import com.zaar.chequeinfo.viewModels.BaseViewModelSummarizedInf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class UploadChequesViewModel(
+class UploadChequesBaseViewModelSummarizedInf(
     private val parsedData: ParsedData,
 ) : BaseViewModelSummarizedInf() {
 
     private val chequesList = parsedData.chequeModels
 
     fun getSummarizedInfo() = viewModelScope.launch(Dispatchers.IO) {
-        currentProgress.set(0)
-//        mldSetProgress.postValue(0)
-        mldIsProgress.postValue(true)
         getSummarizedInformation(
             parsedData.chequeModels
         )
@@ -25,9 +22,6 @@ class UploadChequesViewModel(
 
     fun saveCheques() {
         viewModelScope.launch(Dispatchers.IO) {
-            currentProgress.set(0)
-//            mldSetProgress.postValue(0)
-            mldIsProgress.postValue(true)
             LocalDbRepositoryImpl().apply {
                 val map = setChequesModel(chequesModel = chequesList)
                 val chequeRejected = chequesList.size -

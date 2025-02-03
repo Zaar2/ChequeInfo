@@ -7,7 +7,7 @@ import com.zaar.chequeinfo.viewModels.BaseViewModelSummarizedInf
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class InformationViewModel : BaseViewModelSummarizedInf() {
+class InformationViewModelSummarizedInf : BaseViewModelSummarizedInf() {
 
     private var chequeList: List<ChequeModel> = emptyList()
 

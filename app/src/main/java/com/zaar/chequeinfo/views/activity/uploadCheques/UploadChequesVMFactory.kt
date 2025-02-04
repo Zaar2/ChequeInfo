@@ -9,6 +9,6 @@ class UploadChequesVMFactory(
 ) : ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return UploadChequesBaseViewModelSummarizedInf(parsedData) as T
+        return UploadChequesViewModel(parsedData) as T
     }
 }

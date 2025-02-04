@@ -13,7 +13,7 @@ import com.zaar.chequeinfo.utilities.views.UtilsButtons
 import javax.inject.Inject
 
 class UploadChequesActivity : AppCompatActivity() {
-    private var model: UploadChequesBaseViewModelSummarizedInf? = null
+    private var model: UploadChequesViewModel? = null
 
     @Inject
     lateinit var parsedData: ParsedData
@@ -56,10 +56,10 @@ class UploadChequesActivity : AppCompatActivity() {
         binding.statInfUploadActivity.root.visibility = View.VISIBLE
         binding.statInfoUploadedCheques.root.visibility = View.GONE
 
-        model?.countMaxProgressBar =
-            binding.statInfUploadActivity.layStatInfoMain.childCount
-        binding.progressbar.root.min = 0
-        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
+//        model?.countMaxProgressBar =
+//            binding.statInfUploadActivity.layStatInfoMain.childCount
+//        binding.progressbar.root.min = 0
+//        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
         model?.getSummarizedInfo()
     }
 

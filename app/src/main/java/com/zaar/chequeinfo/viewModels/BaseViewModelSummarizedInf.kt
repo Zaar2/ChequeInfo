@@ -50,13 +50,13 @@ open class BaseViewModelSummarizedInf : ViewModel() {
 //    protected val mldSetProgress = MutableLiveData<Int>()
 //    fun ldSetProgress(): LiveData<Int> = mldSetProgress
 
-//    var countMaxProgressBar = -1
-//        set(value) {
-//            if (value > 0) {
-////                mldSetProgress.postValue(0)
-//            }
-//            field = value
-//        }
+    var countMaxProgressBar = -1
+        set(value) {
+            if (value > 0) {
+//                mldSetProgress.postValue(0)
+            }
+            field = value
+        }
     protected var currentProgress: AtomicInteger = AtomicInteger(0)
 
     private var formatter: DateTimeFormat<LocalDateTime> = FormatterLocalDateTime.formatterDate
@@ -155,9 +155,9 @@ open class BaseViewModelSummarizedInf : ViewModel() {
         }
 
     private fun incrementProgress() {
-//        val progress = currentProgress.incrementAndGet()
-////        mldSetProgress.postValue(progress)
-//        if (progress >= countMaxProgressBar)
-//            mldIsProgress.postValue(false)
+        val progress = currentProgress.incrementAndGet()
+//        mldSetProgress.postValue(progress)
+        if (progress >= countMaxProgressBar)
+            mldIsProgress.postValue(false)
     }
 }

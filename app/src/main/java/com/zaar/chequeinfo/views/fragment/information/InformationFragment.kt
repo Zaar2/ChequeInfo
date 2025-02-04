@@ -53,8 +53,8 @@ class InformationFragment : Fragment() {
 
     private fun initView() {
         binding.statInfInformationFragment.root.visibility = View.VISIBLE
-//        model?.countMaxProgressBar =
-//            binding.statInfInformationFragment.layStatInfoMain.childCount
+        model?.countMaxProgressBar =
+            binding.statInfInformationFragment.layStatInfoMain.childCount
 //        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
     }
 

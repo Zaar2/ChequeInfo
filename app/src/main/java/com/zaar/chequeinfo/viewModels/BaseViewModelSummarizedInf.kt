@@ -47,7 +47,7 @@ open class BaseViewModelSummarizedInf : ViewModel() {
     protected val mldIsProgress = MutableLiveData<Boolean>()
     fun ldIsProgress(): LiveData<Boolean> = mldIsProgress
 
-    private val mldSetProgress = MutableLiveData<Int>()
+    protected val mldSetProgress = MutableLiveData<Int>()
     fun ldSetProgress(): LiveData<Int> = mldSetProgress
 
     var countMaxProgressBar = -1

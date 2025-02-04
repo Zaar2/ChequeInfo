@@ -12,7 +12,8 @@
     <color name="background">@color/transparent</color>
     <color name="transparent">#00000000</color>
     <color name="background_btn">#259696</color>
-    <color name="background_btn_blocked">#731D0E</color>
+    <color name="background_btn_blocked">@color/teal_700</color>
+<!--    <color name="background_btn_blocked">#731D0E</color>-->
     <color name="background_milk">#F0D2B6</color>
     <color name="background_btn_unpress">#8EB5B5</color>
     <color name="background_ripple">#F0D2B680</color>

@@ -5,9 +5,10 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="-7dp"
     android:progressBackgroundTint="@color/transparent"
-    android:progressTint="@color/background_btn"
+    android:progressTint="@color/teal_700"
     android:max="100"
     android:min="0"
+    android:indeterminate="true"
     >
 
 </ProgressBar>

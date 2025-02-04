@@ -14,7 +14,7 @@ import com.zaar.chequeinfo.utilities.views.UtilsButtons
 
 class InformationFragment : Fragment() {
 
-    private var model: InformationViewModelSummarizedInf? = null
+    private var model: InformationViewModel? = null
     private var _binding: FragmentInformationBinding? = null
     private val binding
         get() = _binding ?: throw IllegalStateException(
@@ -39,9 +39,8 @@ class InformationFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        binding.progressbar.root.visibility = View.VISIBLE
         model?.getSummarizedInfo()
-        btnOff()
+        progressOn()
     }
 
     private fun initVariable() {
@@ -49,14 +48,14 @@ class InformationFragment : Fragment() {
             requireActivity(),
             InformationVmFactory(
             )
-        )[InformationViewModelSummarizedInf::class.java]
+        )[InformationViewModel::class.java]
     }
 
     private fun initView() {
         binding.statInfInformationFragment.root.visibility = View.VISIBLE
         model?.countMaxProgressBar =
             binding.statInfInformationFragment.layStatInfoMain.childCount
-        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
+//        binding.progressbar.root.max = model?.countMaxProgressBar ?: 1
     }
 
     private fun initObserve() {
@@ -90,12 +89,12 @@ class InformationFragment : Fragment() {
             binding.statInfInformationFragment.tvValueAvrCostUploadActivity.text = it
         }
         model?.ldIsProgress()?.observe(viewLifecycleOwner) {
-            if (it) btnOff()
-            else btnOn()
+            if (it) progressOn()
+            else progressOff()
         }
-        model?.ldSetProgress()?.observe(viewLifecycleOwner) {
-            binding.progressbar.root.progress = it
-        }
+//        model?.ldSetProgress()?.observe(viewLifecycleOwner) {
+//            binding.progressbar.root.progress = it
+//        }
     }
 
     private fun initObserveView() {
@@ -120,13 +119,13 @@ class InformationFragment : Fragment() {
         }
     }
 
-    private fun btnOff() {
+    private fun progressOn() {
         UtilsButtons.activeBtnOffBlock(binding.btnBack, requireContext())
         UtilsButtons.activeBtnOffBlock(binding.btnClearDatabase, requireContext())
         binding.progressbar.root.visibility = View.VISIBLE
     }
 
-    private fun btnOn() {
+    private fun progressOff() {
         binding.progressbar.root.visibility = View.INVISIBLE
         UtilsButtons.activeBtnOn(binding.btnBack, requireContext())
         UtilsButtons.activeBtnOn(binding.btnClearDatabase, requireContext())

@@ -7,6 +7,6 @@ class InformationVmFactory(
 ): ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
-        return InformationViewModel() as T
+        return InformationViewModelSummarizedInf() as T
     }
 }
